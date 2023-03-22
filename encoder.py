@@ -8,6 +8,15 @@ def encode(string):
         encoded.append(str(digit))
     return ''.join(encoded)
 
+def decode(string):
+    decoded = []
+    for i in string:
+        digit = int(i) + 3
+        if digit < 0:
+            digit += 10
+        decoded.append(str(digit))
+    return ''.join(decoded)
+
 def main():
     while True:
         print('Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n')
